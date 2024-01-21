@@ -1,16 +1,31 @@
-<div class="header-outer">
-  <div class="header-inner w-[100%] h-[100%] flex items-center justify-between">
+<div  class="fixed w-[100%] h-[40px] bg-blue-700 z-10 top-0 flex items-center justify-between top-outer-page">
+    <p class=" mb-2  relative left-10 text-white top-icon">
+      <a href="tel:+94 7600888930"><i class="fa-solid fa-phone m-3"></i>+94760088930</a>
+    </p>
+
+    <ul class="space-x-10  text-white  mb-2  flex  items-center justify-between mr-[50px]">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-instagram"></i>
+      <li><i class="fa fa-envelope"></i> | next@gmail.com</li>
+    </ul>
+</div>
+<div class="header-outer  ">
+  <div class="header-inner w-[100%] h-[100%]  flex items-center justify-between">
     <div class="logo-wrapper">
       <img src="../../../../../assets/logo/nextTravel%20Logo.png" alt="" class="w-[250px]">
     </div>
-    <div class="relative  flex items-center justify-center m-4">
-      <ul class="space-x-5 mr-6 text-black font-bold  main-nav">
-        <a    routerLink="/" class="hover:text-blue-500  cursor-pointer ">Home</a>
-        <a   routerLink="/products" class="hover:text-blue-500  cursor-pointer ">Hotel</a>
-        <a  routerLink="/orders" class="hover:text-blue-500  cursor-pointer ">Vehicle</a>
-        <a  routerLink="/cart" class="hover:text-blue-500  cursor-pointer ">Package</a>
-        <a  routerLink="login" class="hover:text-blue-500  cursor-pointer">Login</a>
+    <div class="relative  flex items-center justify-center mr-4 ">
+      <ul class="space-x-10  text-black font-bold  main-nav mr-[50px]">
+        <a    routerLink="/" class="transition-all  ease-in duration-600     hover:text-blue-500 hover:border-b-2 border-blue-700   cursor-pointer ">Home</a>
+        <a   routerLink="/products" class="transition-all duration-600  hover:text-blue-500  hover:border-b-2 border-blue-70  cursor-pointer ">Hotel</a>
+        <a  routerLink="/orders" class="transition-all duration-600   hover:text-blue-500  hover:border-b-2 border-blue-70  cursor-pointer ">Vehicle</a>
+        <a  routerLink="/cart" class=" transition-all duration-600  hover:text-blue-500   hover:border-b-2 border-blue-70 cursor-pointer ">Package</a>
+        <a  routerLink="login" class=" transition-all duration-600   hover:text-blue-500  hover:border-b-2 border-blue-70  cursor-pointer">Contact</a>
       </ul>
+      <div class=" w-[100px]  h-[60px] flex items-center justify-center mr-[80px] lg-outer">
+        <button class="font-bold"> Login</button>
+      </div>
       <div class="inner-wrapper">
         <button  (click)="show()" id="show_button" class="show-button">
           <i class="fa-solid fa-bars"></i>
@@ -18,10 +33,6 @@
       </div>
     </div>
   </div>
-
-
-
-
 
  <div class="mb-outer" id="box">
     <div>
