@@ -1,0 +1,92 @@
+
+.service-main-outer{
+  width: 100%;
+  height: 500px;
+  /*border: 1px solid red;*/
+  display: flex;
+
+}
+.service-inner{
+  flex: 1;
+  /*border: 1px solid red;*/
+  background-size: cover;
+  background-position: center;
+
+}
+.service-inner:hover{
+  cursor: pointer;
+  margin-top: -50px;
+  transition: 0.5s ease-in-out;
+}
+.service-inner:first-child{
+  //background-image:url("img/service-1.jpg");
+  //background-image: url("nextTravel Logo.png");
+
+
+}
+
+.service-inner:nth-child(2){
+  //background-image: url("img/service-2.jpg");
+}
+.service-inner:nth-child(3){
+  //background-image: url("img/service-3.jpg");
+}
+.service-inner:last-child{
+  //background-image: url("img/service-4.jpg");
+}
+
+.shadow-wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(15,25,43,0.5);
+  display: flex;
+  align-items: center;
+}
+.show-wrapper{
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  /*background-color: red;*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidden-wrapper{
+  display: none;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  /*background-color: blue;*/
+}
+.service-inner:hover>.shadow-wrapper >.show-wrapper{
+  display: none;
+}
+.service-inner:hover>.shadow-wrapper >.hidden-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.show-wrapper > p {
+  text-align: center;
+}
+
+.show-wrapper > p >i{
+  font-size: 55px;
+  color: white;
+
+
+}
+.show-wrapper >h2{
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-top:20px ;
+
+}
+.hidden-wrapper >p{
+  text-align: justify;
+  color: white;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 20px;
+}
