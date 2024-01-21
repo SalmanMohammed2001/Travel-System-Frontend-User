@@ -7,6 +7,7 @@ import { StarterHeaderComponent } from './components/starter-header/starter-head
 import { StarterFooterComponent } from './components/starter-footer/starter-footer.component';
 import { StarterHomeComponent } from './components/starter-home/starter-home.component';
 import { MainSliderComponent } from './components/starter-home/inner-items/main-slider/main-slider.component';
+import { MainAboutComponent } from './components/starter-home/inner-items/main-about/main-about.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MainSliderComponent } from './components/starter-home/inner-items/main-
     StarterHeaderComponent,
     StarterFooterComponent,
     StarterHomeComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    MainAboutComponent
   ],
   imports: [
     CommonModule,
