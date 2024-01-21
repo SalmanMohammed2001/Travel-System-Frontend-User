@@ -13,6 +13,7 @@ import { MainServiceComponent } from './components/starter-home/inner-items/main
 import { MainCustomerReviewsComponent } from './components/starter-home/inner-items/main-customer-reviews/main-customer-reviews.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {SlickCarouselModule} from "ngx-slick-carousel";
+import { MainSocialOuterComponent } from './components/starter-home/inner-items/main-social-outer/main-social-outer.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     MainAboutComponent,
     MainIntroductionComponent,
     MainServiceComponent,
-    MainCustomerReviewsComponent
+    MainCustomerReviewsComponent,
+    MainSocialOuterComponent
   ],
   imports: [
     CommonModule,
