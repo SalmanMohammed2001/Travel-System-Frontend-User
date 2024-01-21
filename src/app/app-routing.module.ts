@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {NotFoundPageComponent} from "./components/not-found-page/not-found-page.component";
 
+
 const routes: Routes = [
   {path:'',redirectTo:'starter/home',pathMatch:'full'},
   { path: 'console', loadChildren: () => import('./module/console/console.module').then(m => m.ConsoleModule) },

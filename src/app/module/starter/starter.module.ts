@@ -10,6 +10,9 @@ import { MainSliderComponent } from './components/starter-home/inner-items/main-
 import { MainAboutComponent } from './components/starter-home/inner-items/main-about/main-about.component';
 import { MainIntroductionComponent } from './components/starter-home/inner-items/main-introduction/main-introduction.component';
 import { MainServiceComponent } from './components/starter-home/inner-items/main-service/main-service.component';
+import { MainCustomerReviewsComponent } from './components/starter-home/inner-items/main-customer-reviews/main-customer-reviews.component';
+import {CarouselModule} from "ngx-owl-carousel-o";
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 
 @NgModule({
@@ -21,11 +24,15 @@ import { MainServiceComponent } from './components/starter-home/inner-items/main
     MainSliderComponent,
     MainAboutComponent,
     MainIntroductionComponent,
-    MainServiceComponent
+    MainServiceComponent,
+    MainCustomerReviewsComponent
   ],
   imports: [
     CommonModule,
-    StarterRoutingModule
+    StarterRoutingModule,
+    CarouselModule,
+    SlickCarouselModule,
+
   ]
 })
 export class StarterModule { }
