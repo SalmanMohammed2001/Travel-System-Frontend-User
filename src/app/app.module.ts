@@ -7,6 +7,7 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     CarouselModule,
     SlickCarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
