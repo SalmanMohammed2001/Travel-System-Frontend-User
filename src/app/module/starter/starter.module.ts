@@ -16,6 +16,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
 import { MainSocialOuterComponent } from './components/starter-home/inner-items/main-social-outer/main-social-outer.component';
 import { HotelComponent } from './components/hotel/hotel.component';
 import { HotelViewPageComponent } from './components/hotel/inner-items/hotel-view-page/hotel-view-page.component';
+import { StarterVehicleComponent } from './components/starter-vehicle/starter-vehicle.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HotelViewPageComponent } from './components/hotel/inner-items/hotel-vie
     MainCustomerReviewsComponent,
     MainSocialOuterComponent,
     HotelComponent,
-    HotelViewPageComponent
+    HotelViewPageComponent,
+    StarterVehicleComponent
   ],
   imports: [
     CommonModule,
