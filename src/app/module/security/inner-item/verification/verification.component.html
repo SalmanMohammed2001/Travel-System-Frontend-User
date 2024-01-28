@@ -1,1 +1,23 @@
-<p>verification works!</p>
+
+<div class="main-outer">
+  <div class="inner">
+    <h2 class="header-text">Verify  Account </h2>
+    <hr>
+    <form class="security-form mt-[30px]" [formGroup]="verificationForm" >
+      <div class="col-12 mt-3">
+        <div class="form-group">
+          <input type="text" formControlName="code"    class="form-control" placeholder="otp">
+        </div>
+      </div>
+
+
+      <div class="col-12 mt-3">
+        <div class="form-group">
+          <button type="button" class="btn bg-neutral-700" [disabled]="verificationForm.invalid" (click)="verify()"  >RegisterNow</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+

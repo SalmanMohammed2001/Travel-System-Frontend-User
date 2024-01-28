@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../../../../service/user/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import {UserService} from "../../../../service/user/user.service";
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,private  roter:Router) {
 
   }
 
@@ -85,7 +86,8 @@ export class SignupComponent implements OnInit {
 
 
   this.userService.create(setData).subscribe(res=>{
-    alert("user saved")
+    alert("verify Your account")
+    this.roter.navigateByUrl("security/verify/"+email).then()
   })
 
 
