@@ -7,6 +7,7 @@ import { LoginComponent } from './inner-item/login/login.component';
 import { SignupComponent } from './inner-item/signup/signup.component';
 import { LoginHeaderComponent } from './inner-item/login-header/login-header.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { VerificationComponent } from './inner-item/verification/verification.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     SecurityComponent,
     LoginComponent,
     SignupComponent,
-    LoginHeaderComponent
+    LoginHeaderComponent,
+    VerificationComponent
   ],
   imports: [
     CommonModule,
