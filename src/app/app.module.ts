@@ -9,6 +9,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpManagerInterceptor} from "./interceptor/http-manager.interceptor";
+import {SharedModule} from "./module/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpManagerInterceptor} from "./interceptor/http-manager.interceptor";
     CarouselModule,
     SlickCarouselModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:HttpManagerInterceptor,multi:true}

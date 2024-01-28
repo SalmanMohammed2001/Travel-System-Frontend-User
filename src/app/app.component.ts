@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LoadingService} from "./service/loading/loading.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Travel-System-User-Frontend';
+
+  constructor(protected loadingService:LoadingService) {
+  }
 }
