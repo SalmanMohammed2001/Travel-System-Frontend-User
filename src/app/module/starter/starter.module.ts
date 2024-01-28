@@ -17,6 +17,7 @@ import { MainSocialOuterComponent } from './components/starter-home/inner-items/
 import { HotelComponent } from './components/hotel/hotel.component';
 import { HotelViewPageComponent } from './components/hotel/inner-items/hotel-view-page/hotel-view-page.component';
 import { StarterVehicleComponent } from './components/starter-vehicle/starter-vehicle.component';
+import { VehicelViewPageComponent } from './components/starter-vehicle/inner-item/vehicel-view-page/vehicel-view-page.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { StarterVehicleComponent } from './components/starter-vehicle/starter-ve
     MainSocialOuterComponent,
     HotelComponent,
     HotelViewPageComponent,
-    StarterVehicleComponent
+    StarterVehicleComponent,
+    VehicelViewPageComponent
   ],
   imports: [
     CommonModule,

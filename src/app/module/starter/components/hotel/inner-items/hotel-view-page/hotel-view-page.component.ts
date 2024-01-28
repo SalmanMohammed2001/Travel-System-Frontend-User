@@ -2,14 +2,20 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {HotelService} from "../../../../../../service/hotel.service";
 
+// @ts-ignore
 @Component({
   selector: 'app-hotel-view-page',
   templateUrl: './hotel-view-page.component.html',
   styleUrls: ['./hotel-view-page.component.scss']
 })
 export class HotelViewPageComponent implements  OnInit{
+  private containerTopOffset: number | undefined;
 
   constructor(private  activateRoute:ActivatedRoute, private service:HotelService) {
+
+
+
+
   }
 
   hotelArrayList:Array<any>=[]
@@ -24,6 +30,8 @@ export class HotelViewPageComponent implements  OnInit{
       })
     })
   }
+
+
 
 
 }

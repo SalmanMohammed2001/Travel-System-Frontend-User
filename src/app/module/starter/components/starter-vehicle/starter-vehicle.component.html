@@ -1,16 +1,18 @@
-<div class="container-fluid">
-  <div class="row p-4 mt-[120px] ">
-    <div class="col-md-6  col-lg-4 col-xl-3 mb-5 sm:flex items-center justify-center"
-         *ngFor="let tempData of vehicleArrayList">
-      <div class="card " style="width: 20rem;">
-        <img class="card-img-top" src="data:image/jpeg;base64,{{tempData.vehicleImages[0]}}" alt="Card image cap"
-             style="height: 250px!important;">
+<div class="container-fluid" >
+  <div class="row p-4 mt-[120px] " >
+    <div class="col-md-6  col-lg-4 col-xl-3 mb-5 sm:flex items-center justify-center"  *ngFor="let tempData of vehicleArrayList"   >
+      <div class="card " style="width: 20rem;" >
+        <img class="card-img-top" src="data:image/jpeg;base64,{{tempData.hotelFrontImage}}"  alt="Card image cap"
+             style="height: 250px!important; background-position: center;background-size: cover">
+
+        <h1>{{tempData.name}}</h1>
+
         <div class="card-body">
-          <h5 class="card-title font-bold font-serif text-2xl">{{ tempData.vehicleName }}</h5>
+          <h5 class="card-title font-bold font-serif text-2xl">{{tempData.vehicleName }}</h5>
           <p class="card-text text-l text-pretty"><span >Category: <span
             class="font-bold">{{ tempData.vehicleCategory }}</span></span> <br> <span> Contact : <span
             class="font-bold">{{ tempData.vehicleType}}</span></span></p>
-          <a  class="btn btn-outline-primary btn-sm cursor-pointer" routerLink="/starter/hotel/view/{{tempData.hotelId}}" >View More</a>
+          <a  class="btn btn-outline-primary btn-sm cursor-pointer" routerLink="/starter/vehicle/view/{{tempData.vehicleId}}" >View More</a>
         </div>
       </div>
     </div>

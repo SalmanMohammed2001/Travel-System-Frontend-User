@@ -20,7 +20,10 @@ export class HotelComponent  implements OnInit{
     this.service.findAll().subscribe(res=>{
       this.hotelArrayList=res.data
       console.log(this.hotelArrayList)
+      this.hotelArrayList.forEach((data)=>{
+      })
     })
   }
+
 
 }

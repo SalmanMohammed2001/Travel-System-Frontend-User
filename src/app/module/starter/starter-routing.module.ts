@@ -5,6 +5,9 @@ import {StarterHomeComponent} from "./components/starter-home/starter-home.compo
 import {HotelComponent} from "./components/hotel/hotel.component";
 import {HotelViewPageComponent} from "./components/hotel/inner-items/hotel-view-page/hotel-view-page.component";
 import {StarterVehicleComponent} from "./components/starter-vehicle/starter-vehicle.component";
+import {
+  VehicelViewPageComponent
+} from "./components/starter-vehicle/inner-item/vehicel-view-page/vehicel-view-page.component";
 
 const routes: Routes = [
   { path: '', component: StarterComponent , children:[
@@ -12,7 +15,8 @@ const routes: Routes = [
       {path:'home',component:StarterHomeComponent},
       {path:'hotel',component:HotelComponent},
       {path:'hotel/view/:id',component:HotelViewPageComponent},
-      {path:'vehicle',component:StarterVehicleComponent}
+      {path:'vehicle',component:StarterVehicleComponent},
+      {path:'vehicle/view/:id',component:VehicelViewPageComponent}
     ] }
 ];
 

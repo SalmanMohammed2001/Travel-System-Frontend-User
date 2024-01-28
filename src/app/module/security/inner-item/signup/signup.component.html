@@ -1,0 +1,94 @@
+<div class="customer-outer mt-[100px]">
+  <form action="" [formGroup]="form" (ngSubmit)="createData()" >
+    <div class="container">
+      <h1 class="text-center m-2 text-2xl underline">Register</h1>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <div class="form-group">
+            <input type="text" formControlName="username" class="form-control" placeholder="User Name">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <div class="form-group">
+            <input type="password" formControlName="password"  class="form-control" placeholder="Password">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <div class="form-group">
+            <input type="text" formControlName="nic"  class="form-control" placeholder="nic...">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <div class="form-group">
+            <input type="password" formControlName="dob"  class="form-control" placeholder="dob">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <label for="gender">Gender</label>
+          <select formControlName="gender" id="gender" class="form-control">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <div class="form-group">
+            <input type="text" formControlName="contact1"   class="form-control" placeholder="contact">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <input type="text" formControlName="contact2"   class="form-control" placeholder="contact">
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
+          <input type="email" formControlName="email"   class="form-control" placeholder="email">
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-6">
+          <input type="text" formControlName="address"   class="form-control" placeholder="Address">
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-4 ">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-5">
+          <h3>Profile Image</h3>
+          <div class="img-g">
+            <img src="" alt="" id="profilePic-img-show"> <br><br>
+            <input type="file" id="profilePic" name="profilePic" class="form-control"
+                   placeholder="Profile Image" (change)="image1($event)">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-5">
+          <h3>NicFront</h3>
+          <div class="img-g">
+            <img src="" alt="" id="nicFront-img-show"> <br><br>
+            <input type="file" id="nicFront" name="nicFront" class="form-control"
+                   placeholder="Nic Front" (change)="image2($event)">
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-5">
+          <h3>NicRear</h3>
+          <div class="img-g">
+            <img src="" alt="" id="nicRear-img-show"> <br><br>
+            <input type="file" id="nicRear" name="nicRear" class="form-control"
+                   placeholder="Nic Rear" (change)="image3($event)">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-12 " style="display: flex;justify-content: flex-end">
+          <button class=" btn btn-primary m-2" >Register</button>
+          <button class=" btn btn-dark m-2"  routerLink="/security/login">Login</button>
+
+        </div>
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
+</div>
+
+
+
+
+
+

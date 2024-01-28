@@ -2,8 +2,8 @@
   <div class="row p-4 mt-[120px] ">
     <div class="col-md-6  col-lg-4 col-xl-3 mb-5 sm:flex items-center justify-center"
          *ngFor="let tempData of hotelArrayList">
-      <div class="card " style="width: 20rem;">
-        <img class="card-img-top" src="data:image/jpeg;base64,{{tempData.images[1]}}" alt="Card image cap"
+      <div class="card " style="width: 20rem;" >
+        <img class="card-img-top" src="data:image/jpeg;base64,{{tempData.hotelFrontImage}}" alt="Card image cap"
              style="height: 250px!important;">
         <div class="card-body">
           <h5 class="card-title font-bold font-serif text-2xl">{{ tempData.hotelName }}</h5>
@@ -108,3 +108,4 @@
 
   </div>
 </div>
+
