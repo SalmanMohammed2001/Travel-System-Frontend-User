@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HotelService} from "../../../../service/hotel.service";
-import {VehicleService} from "../../../../service/vehicle.service";
+import {HotelService} from "../../../../service/hotel/hotel.service";
+import {VehicleService} from "../../../../service/vehicle/vehicle.service";
 import {data} from "autoprefixer";
 
 @Component({

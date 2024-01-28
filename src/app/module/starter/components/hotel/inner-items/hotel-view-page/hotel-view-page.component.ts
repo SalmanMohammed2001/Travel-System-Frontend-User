@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {HotelService} from "../../../../../../service/hotel.service";
+import {HotelService} from "../../../../../../service/hotel/hotel.service";
 
 // @ts-ignore
 @Component({

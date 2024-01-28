@@ -23,13 +23,7 @@
             <input type="password" formControlName="dob"  class="form-control" placeholder="dob">
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
-          <label for="gender">Gender</label>
-          <select formControlName="gender" id="gender" class="form-control">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
+
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
           <div class="form-group">
             <input type="text" formControlName="contact1"   class="form-control" placeholder="contact">
@@ -41,9 +35,16 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px]">
           <input type="email" formControlName="email"   class="form-control" placeholder="email">
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-6">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] ">
           <input type="text" formControlName="address"   class="form-control" placeholder="Address">
         </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-[15px] mb-6 ">
+        <label for="gender">Gender</label>
+        <select formControlName="gender" id="gender" class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
       </div>
       <hr>
       <div class="row mt-4 ">
@@ -76,7 +77,7 @@
       <br>
       <div class="row">
         <div class="col-12 " style="display: flex;justify-content: flex-end">
-          <button class=" btn btn-primary m-2" >Register</button>
+          <button class=" btn btn-primary m-2" [disabled]="form.invalid" >Register</button>
           <button class=" btn btn-dark m-2"  routerLink="/security/login">Login</button>
 
         </div>

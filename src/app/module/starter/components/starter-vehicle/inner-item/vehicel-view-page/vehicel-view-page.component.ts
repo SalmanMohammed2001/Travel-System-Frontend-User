@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {HotelService} from "../../../../../../service/hotel.service";
-import {VehicleService} from "../../../../../../service/vehicle.service";
+import {HotelService} from "../../../../../../service/hotel/hotel.service";
+import {VehicleService} from "../../../../../../service/vehicle/vehicle.service";
 
 @Component({
   selector: 'app-vehicel-view-page',

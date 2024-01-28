@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UserService} from "../../../../service/user/user.service";
 
 @Component({
   selector: 'app-signup',
@@ -8,8 +9,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class SignupComponent implements OnInit {
 
-  /*constructor(private service: CustomerService) {
-  }*/
+  constructor(private userService: UserService) {
+
+  }
 
   ngOnInit(): void {
 
@@ -82,10 +84,10 @@ export class SignupComponent implements OnInit {
     setData.append('profilePic', profilePic!)
 
 
-   /* this.service.create(setData).subscribe(res => {
-      alert('save')
-    })
-*/
+  this.userService.create(setData).subscribe(res=>{
+    alert("user saved")
+  })
+
 
   }
 
