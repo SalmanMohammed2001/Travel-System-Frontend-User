@@ -17,7 +17,13 @@ export class UserService {
   public verify(code:string,email:string):Observable<any>{
     return this.http.post('http://localhost:8081/api/v1/users/visitor/verify/'+code+'?email='+email,{})
 
+  }
 
+  login(email:any,password:any):Observable<any>{
+    return this.http.post("http://localhost:8081/login",{
+      username:email,
+      password:password
+    })
 
   }
 }

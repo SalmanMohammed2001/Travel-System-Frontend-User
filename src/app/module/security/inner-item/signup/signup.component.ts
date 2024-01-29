@@ -87,7 +87,7 @@ export class SignupComponent implements OnInit {
 
   this.userService.create(setData).subscribe(res=>{
     alert("verify Your account")
-    this.roter.navigateByUrl("security/verify/"+email).then()
+   this.roter.navigateByUrl("security/verify/"+email).then()
   })
 
 

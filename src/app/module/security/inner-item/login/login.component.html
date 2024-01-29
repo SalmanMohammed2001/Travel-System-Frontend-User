@@ -3,26 +3,26 @@
   <div class="inner">
     <h2 class="header-text">Login</h2>
     <hr>
-    <form class="security-form mt-[30px]">
+    <form class="security-form mt-[30px]" [formGroup]="form" (ngSubmit)="login">
         <div class="col-12 mt-3">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email">
+            <input type="text" class="form-control" formControlName="email"  placeholder="Email">
           </div>
         </div>
 
       <div class="col-12 mt-3">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Password">
+          <input type="text" class="form-control" formControlName="password" placeholder="Password">
         </div>
       </div>
       <div class="col-12 mt-3">
         <div class="form-group">
-          <button class="btn btn-primary ">Login</button>
+          <button type="submit" [disabled]="form.invalid" class="btn btn-primary ">Login</button>
         </div>
       </div>
       <div class="col-12 mt-3">
         <div class="form-group">
-          <button class="btn bg-neutral-700 " routerLink="/security/signup">SignUp</button>
+          <button type="button" class="btn bg-neutral-700 " routerLink="/security/signup">SignUp</button>
         </div>
       </div>
     </form>
