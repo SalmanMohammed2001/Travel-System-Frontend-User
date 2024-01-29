@@ -3,7 +3,7 @@
   <div class="inner">
     <h2 class="header-text">Login</h2>
     <hr>
-    <form class="security-form mt-[30px]" [formGroup]="form" (ngSubmit)="login">
+    <form class="security-form mt-[30px]" [formGroup]="form" (ngSubmit)="login()">
         <div class="col-12 mt-3">
           <div class="form-group">
             <input type="text" class="form-control" formControlName="email"  placeholder="Email">
