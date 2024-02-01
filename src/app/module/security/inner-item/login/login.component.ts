@@ -4,6 +4,8 @@ import {UserService} from "../../../../service/user/user.service";
 import {first} from "rxjs";
 import {data} from "autoprefixer";
 import {HttpResponse} from "@angular/common/http";
+import {AuthService} from "../../../../service/auth/Auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import {HttpResponse} from "@angular/common/http";
 })
 export class LoginComponent {
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService,private authService:AuthService,private router:Router) {
   }
 
   form=new FormGroup({
@@ -28,6 +30,8 @@ export class LoginComponent {
   ).pipe(first())
     .subscribe((data:HttpResponse<any>)=>{
       console.log(data.headers.get('Authorization'))
+      this.authService.createToken('myToken',data.headers.get('Authorization')!)
+      this.router.navigateByUrl("/console")
     },error => {
 
     })
