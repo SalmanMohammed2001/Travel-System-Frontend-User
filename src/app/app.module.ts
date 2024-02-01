@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpManagerInterceptor} from "./interceptor/http-manager.interceptor";
 import {SharedModule} from "./module/shared/shared.module";
+import {CookieService} from "ngx-cookie-service";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {SharedModule} from "./module/shared/shared.module";
     SharedModule
   ],
   providers: [
+    CookieService,
     {provide:HTTP_INTERCEPTORS,useClass:HttpManagerInterceptor,multi:true}
   ],
   bootstrap: [AppComponent]
