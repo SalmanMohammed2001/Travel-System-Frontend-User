@@ -19,6 +19,6 @@ export class AuthService {
     }
 
     getCookies(key:string){
-    this.cookieService.get(key)
+   return  this.cookieService.get(key)
     }
 }
