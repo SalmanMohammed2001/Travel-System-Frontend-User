@@ -21,4 +21,8 @@ export class AuthService {
     getCookies(key:string){
    return  this.cookieService.get(key)
     }
+
+    clearCookie(key:string){
+    this.cookieService.delete(key)
+    }
 }

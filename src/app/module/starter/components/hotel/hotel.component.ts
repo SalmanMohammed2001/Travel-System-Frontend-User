@@ -13,17 +13,28 @@ export class HotelComponent  implements OnInit{
   }
   ngOnInit(): void {
     this.findAll()
+    this.findId()
+
   }
 
   hotelArrayList:Array<any>=[]
+  selectHotelArrayList:Array<any>=[]
+
   findAll(){
     this.service.findAll().subscribe(res=>{
       this.hotelArrayList=res.data
-      console.log(this.hotelArrayList)
-      this.hotelArrayList.forEach((data)=>{
-      })
+    //  console.log(this.hotelArrayList)
+      this.findId()
     })
   }
 
+  findId(){
+    for (let i = 0; i <this.hotelArrayList.length ; i++) {
+      this.service.findId(this.hotelArrayList[i].hotelId).subscribe(res=>{
+        this.selectHotelArrayList=res.data;
+        console.log(this.selectHotelArrayList)
+      })
+    }
 
+  }
 }

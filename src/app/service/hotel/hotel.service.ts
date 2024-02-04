@@ -15,5 +15,4 @@ export class HotelService {
   findId(id:any):Observable<any>{
     return  this.http.get('http://localhost:8081/api/v1/hotel/'+id)
   }
-
 }
