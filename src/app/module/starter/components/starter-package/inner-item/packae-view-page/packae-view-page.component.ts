@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {VehicleService} from "../../../../../../service/vehicle/vehicle.service";
 import {PackageService} from "../../../../../../service/pacage/package.service";
 import {HotelService} from "../../../../../../service/hotel/hotel.service";
+import {DetailsService} from "../../../../../../service/dataSet/details.service";
 
 @Component({
   selector: 'app-packae-view-page',
@@ -14,6 +15,7 @@ export class PackaeViewPageComponent implements OnInit{
   constructor(private  activateRoute:ActivatedRoute, private packageService:PackageService,
              private hotelService:HotelService,
              private vehicleService:VehicleService,
+             private detailsService:DetailsService,
   ) {
   }
 
@@ -21,7 +23,7 @@ export class PackaeViewPageComponent implements OnInit{
   ngOnInit(): void {
     this.activateRoute.paramMap.subscribe(res=>{
       this.id=res.get('id')
-      console.log(this.id)
+   //   console.log(this.id)
     })
 
     this.findPackage()
@@ -36,28 +38,32 @@ export class PackaeViewPageComponent implements OnInit{
       this.hotelId=res.data[0].hotel.hotelId
       this.vehicleId=res.data[0].vehicle.vehicleId
 
-      console.log(this.vehicleId)
-      this.findHotel()
-     this.findVehicle()
+
+
+      this.findHotel();
+     this.findVehicle();
+
+      this.detailsService.setPackageId(res.data[0].packageId)
     })
 
   }
 
   hotelArray:Array<any>=[]
   findHotel(){
-    console.log(this.hotelId)
+   // console.log(this.hotelId)
    this.hotelService.findId(this.hotelId).subscribe(res=>{
       this.hotelArray=res.data
+
+     console.log(this.detailsService.getPackageId())
     })
   }
 
   vehicleArray:Array<any>=[]
   findVehicle(){
-    console.log(this.hotelId)
+   // console.log(this.hotelId)
     this.vehicleService.findById(this.vehicleId).subscribe(res=>{
       this.vehicleArray=res
-      console.log(this.vehicleArray)
+ //     console.log(this.vehicleArray)
     })
   }
-
 }

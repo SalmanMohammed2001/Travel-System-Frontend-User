@@ -23,6 +23,6 @@ export class AuthService {
     }
 
     clearCookie(key:string){
-    this.cookieService.delete(key)
+    this.cookieService.delete(key);
     }
 }
