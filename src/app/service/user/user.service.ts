@@ -31,4 +31,9 @@ export class UserService {
         return data
       }))
   }
+
+  findEmail(email:any):Observable<any>{
+    return  this.http.get<any>('http://localhost:8081/api/v1/users/'+email)
+
+  }
 }
