@@ -19,6 +19,7 @@ import { HotelViewPageComponent } from './components/hotel/inner-items/hotel-vie
 import { StarterVehicleComponent } from './components/starter-vehicle/starter-vehicle.component';
 import { VehicelViewPageComponent } from './components/starter-vehicle/inner-item/vehicel-view-page/vehicel-view-page.component';
 import { StarterPackageComponent } from './components/starter-package/starter-package.component';
+import { PackaeViewPageComponent } from './components/starter-package/inner-item/packae-view-page/packae-view-page.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { StarterPackageComponent } from './components/starter-package/starter-pa
     HotelViewPageComponent,
     StarterVehicleComponent,
     VehicelViewPageComponent,
-    StarterPackageComponent
+    StarterPackageComponent,
+    PackaeViewPageComponent
   ],
   imports: [
     CommonModule,
