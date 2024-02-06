@@ -7,6 +7,7 @@ import { SaveBookingComponent } from './components/save-booking/save-booking.com
 import { BookingDetailsComponent } from './components/booking-details/booking-details.component';
 import { UpdateBookingComponent } from './components/update-booking/update-booking.component';
 import { HeadersComponent } from './components/headers/headers.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeadersComponent } from './components/headers/headers.component';
   ],
   imports: [
     CommonModule,
-    ConsoleRoutingModule
+    ConsoleRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ConsoleModule { }
