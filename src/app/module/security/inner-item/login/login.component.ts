@@ -32,6 +32,8 @@ export class LoginComponent {
       console.log(data.headers.get('Authorization'))
       this.authService.createToken('myToken',data.headers.get('Authorization')!)
       this.router.navigateByUrl("/console")
+
+
     },error => {
 
     })

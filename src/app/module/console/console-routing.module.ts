@@ -15,5 +15,6 @@ export class ConsoleRoutingModule implements OnInit{
   }
 
   ngOnInit(): void {
+    console.log()
   }
 }
