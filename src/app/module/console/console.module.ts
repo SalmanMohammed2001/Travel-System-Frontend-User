@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ConsoleRoutingModule } from './console-routing.module';
 import { ConsoleComponent } from './console.component';
-import { SaveBookingComponent } from './save-booking/save-booking.component';
-import { BookingDetailsComponent } from './booking-details/booking-details.component';
-import { UpdateBookingComponent } from './update-booking/update-booking.component';
+import { SaveBookingComponent } from './components/save-booking/save-booking.component';
+import { BookingDetailsComponent } from './components/booking-details/booking-details.component';
+import { UpdateBookingComponent } from './components/update-booking/update-booking.component';
+import { HeadersComponent } from './components/headers/headers.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { UpdateBookingComponent } from './update-booking/update-booking.componen
     ConsoleComponent,
     SaveBookingComponent,
     BookingDetailsComponent,
-    UpdateBookingComponent
+    UpdateBookingComponent,
+    HeadersComponent
   ],
   imports: [
     CommonModule,

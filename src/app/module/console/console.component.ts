@@ -9,32 +9,4 @@ import {jwtDecode} from "jwt-decode";
   templateUrl: './console.component.html',
   styleUrls: ['./console.component.scss']
 })
-export class ConsoleComponent implements OnInit {
-  constructor(private detailService: DetailsService, private authService: AuthService) {
-  }
-
-  token:any
-  email:any
-  ngOnInit(): void {
-    this.detailService.data$.subscribe(data => {
-      console.log(data)
-    });
-   this.token= this.authService.getCookies("myToken")
-    console.log(this.token)
-  this.email=this.getEmailFromToken(this.token)
-    console.log(this.email)
-  }
-
-
-
-   getEmailFromToken(token: string): string | null {
-    try {
-      const decoded: any = jwtDecode(token);
-      return decoded.sub;
-    } catch (error) {
-      console.error('Error decoding token:', error);
-      return null;
-    }
-  }
-
-}
+export class ConsoleComponent {}
