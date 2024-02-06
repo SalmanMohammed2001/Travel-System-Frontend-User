@@ -22,7 +22,13 @@ export class AuthService {
    return  this.cookieService.get(key)
     }
 
+
+    getAll(){
+    return this.cookieService.getAll();
+    }
     clearCookie(key:string){
     this.cookieService.delete(key);
     }
+
+
 }

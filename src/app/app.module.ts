@@ -11,6 +11,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpManagerInterceptor} from "./interceptor/http-manager.interceptor";
 import {SharedModule} from "./module/shared/shared.module";
 import {CookieService} from "ngx-cookie-service";
+import { jwtDecode } from "jwt-decode";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {CookieService} from "ngx-cookie-service";
     SlickCarouselModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+
+
   ],
   providers: [
     CookieService,

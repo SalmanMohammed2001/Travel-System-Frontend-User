@@ -54,7 +54,7 @@ export class PackaeViewPageComponent implements OnInit{
    this.hotelService.findId(this.hotelId).subscribe(res=>{
       this.hotelArray=res.data
 
-     console.log(this.detailsService.getPackageId())
+   // console.log(this.detailsService.getPackageId())
     })
   }
 
