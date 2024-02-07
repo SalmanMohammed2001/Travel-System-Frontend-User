@@ -5,6 +5,8 @@ import {jwtDecode} from "jwt-decode";
 import {UserService} from "../../../../service/user/user.service";
 import {PackageService} from "../../../../service/pacage/package.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {BookingService} from "../../../../service/booking/booking.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-save-booking',
@@ -13,7 +15,10 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class SaveBookingComponent implements OnInit {
   constructor(private detailService: DetailsService, private authService: AuthService,private userService:UserService,
-              private packageService:PackageService) {
+              private packageService:PackageService,
+              private bookingService:BookingService,
+              private router:Router
+              ) {
   }
 
   token:any
@@ -179,16 +184,17 @@ export class SaveBookingComponent implements OnInit {
     // @ts-ignore
     setData.append('bookingPrice', total!);
     // setData.append('bookingDate',   new Date().toLocaleDateString());
-    setData.append('bookingDate',   '2/5/2021');
+    setData.append('bookingDate',   new Date().toLocaleDateString());
     setData.append('bankSlip', bankSlipData!);
     setData.append('user', customerId!);
     setData.append('bookingDetails',JSON.stringify(this.cartArray))
 
 
-   /* this.bookingService.create(setData).subscribe(res => {
+    this.bookingService.create(setData).subscribe(res => {
       alert('save')
+      this.router.navigateByUrl("/")
     })
-*/
+
 
   }
 
