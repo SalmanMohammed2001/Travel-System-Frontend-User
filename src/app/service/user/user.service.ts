@@ -36,4 +36,9 @@ export class UserService {
     return  this.http.get<any>('http://localhost:8081/api/v1/users/'+email)
 
   }
+
+  findAll():Observable<any>{
+    return  this.http.get<any>('http://localhost:8081/api/v1/users')
+
+  }
 }

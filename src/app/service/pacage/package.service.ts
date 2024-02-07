@@ -14,8 +14,13 @@ export class PackageService {
 
   }
 
-  findId(id:any):Observable<any>{
-    return this.http.get('http://localhost:8081/api/v1/packageDetails/'+id)
 
+
+  findAll():Observable<any>{
+    return this.http.get<any>('http://localhost:8081/api/v1/packageDetails')
   }
+  findId(id:any):Observable<any>{
+    return  this.http.get('http://localhost:8081/api/v1/packageDetails/'+id)
+  }
+
 }

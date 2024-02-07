@@ -51,10 +51,19 @@ export class BookingDetailsComponent implements OnInit{
   findByBookingUser(id:any){
     this.bookingService.findByUserID(id).subscribe(res=>{
       this.bookingArrayList=res.data
+      console.log(this.bookingArrayList)
     })
   }
 
 
+  findBookingList:Array<any>=[]
+  findBooking(id:any){
+    this.bookingService.findId(id).subscribe(res=>{
+      this.findBookingList=res.data[0].bookingDetailsLis
+    //  console.log(this.findBookingList)
+
+    })
+  }
 
 
 }

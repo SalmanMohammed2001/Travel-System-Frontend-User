@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: ConsoleComponent ,children:[
       {path:'',redirectTo:'/console/save',pathMatch:'full'},
       {path:'save',component:SaveBookingComponent},
-      {path:'update',component:UpdateBookingComponent},
+      {path:'update/:id',component:UpdateBookingComponent},
       {path:'view',component:BookingDetailsComponent},
     ]}];
 
